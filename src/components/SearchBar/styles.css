@@ -1,0 +1,38 @@
+.searchbar {
+  display: flex;
+  justify-content: center;
+  background-image: url('https://cdn-images-1.medium.com/fit/t/1600/480/1*IQGzenHrXsPnekrTbfadkQ.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 10rem 0;
+  background-position: center;
+}
+.searchbar form {
+  display: flex;
+  justify-content: center;
+}
+.searchbar form input {
+  width: 400px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #c4c4c4;
+  border-right: none;
+  outline: none;
+}
+.searchbar form button {
+  background-color: #d85353;
+  border: none;
+  outline: none;
+  padding: 8px 1rem;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+}
+.searchbar form button:hover {
+  background-color: #963131;
+  color: #c4c4c4;
+  cursor: pointer;
+}
