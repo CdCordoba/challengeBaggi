@@ -1,0 +1,18 @@
+.filters {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+}
+.filters h4 {
+  margin-right: 1rem;
+}
+.stars__container {
+  color: rgba(0, 0, 0, 0.199);
+}
+.stars__container .stars:hover {
+  cursor: pointer;
+  color: gold;
+}
+.starMarked {
+  color: gold;
+}

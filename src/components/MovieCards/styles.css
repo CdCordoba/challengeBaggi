@@ -1,4 +1,29 @@
-.movies {
+.movies__container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  padding: 2rem 10px;
+  margin: auto;
+}
+.movies__container .movies {
+  margin: 10px 5px;
+}
+.movies__container .movies img {
+  width: 15rem;
+  height: 20rem;
+  transition: transform 0.5s;
+}
+.movies__container .movies img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 5px 5px 40px -2px black;
+}
+.movies__container .loading {
+  border-radius: 50%;
+  grid-column-start: 3;
+}
+.notFound {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
 }
