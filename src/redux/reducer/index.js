@@ -1,4 +1,8 @@
-import { GET_ALL_MOVIES, GET_MOVIE_BY_SEARCH } from "../actions/index";
+import {
+  GET_ALL_MOVIES,
+  GET_MOVIE_BY_SEARCH,
+  FILTER_BY_STARS,
+} from "../actions/index";
 
 const initialState = {
   allMovies: {},
@@ -29,6 +33,16 @@ const rootReducer = (state = initialState, action) => {
           notFound: true,
         };
       }
+    case FILTER_BY_STARS:
+      let newMovies = state.allMovies.results.filter(
+        (e) => Math.ceil(e.vote_average / 2) === payload
+      );
+      return {
+        ...state,
+        movies: { results: newMovies },
+        notFound: newMovies.length ? false : true,
+      };
+
     default:
       return state;
   }

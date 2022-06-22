@@ -4,7 +4,7 @@ import './styles.css'
 export default function Filters() {
     return (
         <div className='filters'>
-            <h4>Filter Movies by stars!</h4>
+            <h4>search by rating</h4>
             <Stars />
         </div>
     )

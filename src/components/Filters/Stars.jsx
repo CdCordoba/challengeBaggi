@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { AiFillStar } from "react-icons/ai";
+import { useDispatch } from 'react-redux';
+import { filterByStars, getAllMovies } from '../../redux/actions';
 import "./styles.css";
+
 export default function Stars() {
+    const dispatch = useDispatch();
     const [starPressed, setStarPressed] = useState(0)
 
     function handleOnCLick(e, star) {
@@ -18,9 +22,17 @@ export default function Stars() {
                 starMarked.classList.remove('starMarked');
             }
         }
-        starPressed === star
-            ? setStarPressed(0)
-            : setStarPressed(star)
+
+        if (starPressed === star) {
+            setStarPressed(0);
+            dispatch(getAllMovies());
+        }
+        else {
+            setStarPressed(star);
+            dispatch(filterByStars(star));
+
+        }
+
     }
     // function applyEvents() {
     //     for (let i = 1; i <= 5; i++) {
@@ -38,11 +50,11 @@ export default function Stars() {
 
     return (
         <div className='stars__container'>
-            <AiFillStar onClick={(e => handleOnCLick(e, 1))} className="stars" id={1} />
-            <AiFillStar onClick={(e => handleOnCLick(e, 2))} className="stars" id={2} />
-            <AiFillStar onClick={(e => handleOnCLick(e, 3))} className="stars" id={3} />
-            <AiFillStar onClick={(e => handleOnCLick(e, 4))} className="stars" id={4} />
-            <AiFillStar onClick={(e => handleOnCLick(e, 5))} className="stars" id={5} />
+            <AiFillStar size={25} onClick={(e => handleOnCLick(e, 1))} className="stars" id={1} />
+            <AiFillStar size={25} onClick={(e => handleOnCLick(e, 2))} className="stars" id={2} />
+            <AiFillStar size={25} onClick={(e => handleOnCLick(e, 3))} className="stars" id={3} />
+            <AiFillStar size={25} onClick={(e => handleOnCLick(e, 4))} className="stars" id={4} />
+            <AiFillStar size={25} onClick={(e => handleOnCLick(e, 5))} className="stars" id={5} />
             {/* {applyEvents()} */}
         </div>
     )

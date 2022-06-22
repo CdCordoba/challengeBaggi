@@ -1,16 +1,24 @@
+@import './variables.less';
+
 .filters {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    background-color: aliceblue;
+    background-color: rgba(49, 46, 46, 0.774);
+    justify-content: center;
 
     h4 {
-        margin-right: 1rem;
-
+        color: white;
+        font-size: 30px;
+        margin: 5px 0;
+        font-family: @bebasNeue;
+        letter-spacing: 3px
     }
 }
 
 .stars__container {
-    color: rgba(0, 0, 0, 0.199);
+    color: rgba(255, 255, 255, 0.562);
+    margin: 5px;
 
     .stars {
         &:hover {

@@ -18,12 +18,37 @@
   box-shadow: 5px 5px 40px -2px black;
 }
 .movies__container .loading {
-  border-radius: 50%;
+  display: block;
+  font-family: 'Joan', serif;
+  font-size: 35px;
+  color: white;
+  text-align: center;
   grid-column-start: 3;
+}
+.movies__container .loading p {
+  margin: 10px;
+}
+.movies__container .loading img {
+  border-radius: 40%;
+}
+.movies__container .loading button {
+  font-size: 18px;
+  border-radius: 5px;
+  color: white;
+  background-color: #d85353;
+  border: 1px solid black;
+  font-family: 'Quattrocento', serif;
+  padding: 10px 1rem;
+}
+.movies__container .loading button:hover {
+  cursor: pointer;
+  background-color: #963131;
+  color: #c4c4c4;
 }
 .notFound {
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 30px;
+  font-size: 35px;
+  font-family: 'Joan', serif;
 }

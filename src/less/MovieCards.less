@@ -1,3 +1,5 @@
+@import './variables.less';
+
 .movies__container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -15,14 +17,43 @@
             &:hover {
                 transform: scale(1.05);
                 cursor: pointer;
-                box-shadow: 5px 5px 40px -2px black;
+                box-shadow: @boxShadow;
             }
         }
     }
 
     .loading {
-        border-radius: 50%;
+
+        display: block;
+        font-family: @joan;
+        font-size: 35px;
+        color: white;
+        text-align: center;
         grid-column-start: 3;
+
+        p {
+            margin: 10px;
+        }
+
+        img {
+            border-radius: 40%;
+        }
+
+        button {
+            font-size: 18px;
+            border-radius: 5px;
+            color: white;
+            background-color: @searchColor;
+            border: 1px solid black;
+            font-family: @buttonFont;
+            padding: 10px 1rem;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #963131;
+                color: #c4c4c4;
+            }
+        }
     }
 }
 
@@ -30,5 +61,7 @@
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 30px;
+    font-size: 35px;
+    font-family: @joan;
+
 }
