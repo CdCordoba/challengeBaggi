@@ -22,6 +22,11 @@
   font-family: 'Quattrocento', serif;
   margin: 5px 0 2px 0;
 }
+@media (max-width: 768px) {
+  .detail__container h1 {
+    font-size: 30px;
+  }
+}
 .movieDetail {
   display: flex;
   align-items: center;
@@ -41,6 +46,14 @@
   }
   .movieDetail img {
     max-width: 18rem !important;
+  }
+}
+@media (max-width: 550px) {
+  .movieDetail {
+    margin: 10px 30px;
+  }
+  .movieDetail img {
+    max-width: 10rem !important;
   }
 }
 .movieDetail img {
