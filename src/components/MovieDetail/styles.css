@@ -1,0 +1,55 @@
+.detail__container button {
+  display: flex;
+  font-family: 'Bebas Neue', cursive;
+  margin: 5px 10px;
+  font-size: 20px;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #d85353;
+  color: white;
+  border: 1px solid black;
+}
+.detail__container button:hover {
+  background-color: #963131;
+  color: #c4c4c4;
+  cursor: pointer;
+}
+.detail__container h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-family: 'Quattrocento', serif;
+  margin: 5px 0 2px 0;
+}
+.movieDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5rem 0;
+  margin: 3rem 5rem;
+  color: black;
+  background-color: wheat;
+  box-shadow: 5px 5px 40px -2px black;
+}
+.movieDetail img {
+  width: 15rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 40px -2px black;
+}
+.movieDetail .info {
+  max-width: 40rem;
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+}
+.movieDetail .info .info__stars {
+  display: flex;
+  align-items: center;
+}
+.movieDetail .info .info__stars p {
+  margin: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}

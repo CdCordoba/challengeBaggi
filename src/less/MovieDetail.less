@@ -1,0 +1,67 @@
+@import './variables.less';
+
+.detail__container {
+    button {
+        display: flex;
+        font-family: @bebasNeue;
+        margin: 5px 10px;
+        font-size: 20px;
+        align-items: center;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: @searchColor;
+        color: white;
+        border: 1px solid black;
+
+        &:hover {
+            background-color: #963131;
+            color: #c4c4c4;
+            cursor: pointer;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        font-family: @buttonFont;
+        margin: 5px 0 2px 0;
+    }
+
+}
+
+.movieDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5rem 0;
+    margin: 3rem 5rem;
+    color: black;
+    background-color: wheat;
+    box-shadow: @boxShadow;
+
+    img {
+        width: 15rem;
+        border-radius: 5px;
+        box-shadow: @boxShadow;
+    }
+
+    .info {
+        max-width: 40rem;
+        font-size: 20px;
+        font-family: @work;
+
+        .info__stars {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin: 0;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

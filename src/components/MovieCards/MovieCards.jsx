@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { getAllMovies } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 import { BiError } from 'react-icons/bi'
 import './styles.css';
 
 export default function MovieCards() {
-    const IMG_URL = 'https://image.tmdb.org/t/p/w500'
+    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -17,6 +18,7 @@ export default function MovieCards() {
         e.preventDefault();
         dispatch(getAllMovies())
     }
+
     const movies = useSelector(state => state.movies);
     var notFound = useSelector(state => state.notFound);
     return (
@@ -33,9 +35,11 @@ export default function MovieCards() {
                 :
                 movies.results?.length ? movies.results?.map((movie) => {
                     return (
-                        <div key={movie.id} className='movies'>
-                            <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} />
-                        </div>
+                        <Link to={`/movie/${movie.id}`}>
+                            <div key={movie.id} className='movies'>
+                                <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} />
+                            </div>
+                        </Link>
                     )
                 })
                     :

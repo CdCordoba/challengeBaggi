@@ -2,11 +2,13 @@ import {
   GET_ALL_MOVIES,
   GET_MOVIE_BY_SEARCH,
   FILTER_BY_STARS,
+  GET_MOVIE_DETAIL,
 } from "../actions/index";
 
 const initialState = {
   allMovies: {},
   movies: {},
+  movieDetail: {},
   notFound: false,
 };
 
@@ -41,6 +43,12 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         movies: { results: newMovies },
         notFound: newMovies.length ? false : true,
+      };
+    case GET_MOVIE_DETAIL:
+      let movieDetail = state.allMovies.results.find((e) => e.id == payload);
+      return {
+        ...state,
+        movieDetail,
       };
 
     default:

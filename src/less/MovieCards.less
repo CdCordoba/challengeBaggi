@@ -6,8 +6,30 @@
     padding: 2rem 10px;
     margin: auto;
 
+    @media (max-width: @desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: @tablet) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .movies {
+            img {
+                width: 20rem !important;
+                height: 25rem !important;
+            }
+        }
+
+    }
+
+    @media (max-width: @mobile) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .movies {
-        margin: 10px 5px;
+        display: flex;
+        padding: 10px 5px;
+        justify-content: center;
 
         img {
             width: 15rem;

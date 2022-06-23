@@ -4,8 +4,29 @@
   padding: 2rem 10px;
   margin: auto;
 }
+@media (max-width: 1200px) {
+  .movies__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .movies__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .movies__container .movies img {
+    width: 20rem !important;
+    height: 25rem !important;
+  }
+}
+@media (max-width: 550px) {
+  .movies__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .movies__container .movies {
-  margin: 10px 5px;
+  display: flex;
+  padding: 10px 5px;
+  justify-content: center;
 }
 .movies__container .movies img {
   width: 15rem;

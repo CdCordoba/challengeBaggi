@@ -22,6 +22,16 @@
   border-right: none;
   outline: none;
 }
+@media (max-width: 768px) {
+  .searchbar form input {
+    width: 300px;
+  }
+}
+@media (max-width: 550px) {
+  .searchbar form input {
+    width: 200px;
+  }
+}
 .searchbar form button {
   background-color: #d85353;
   border: none;
