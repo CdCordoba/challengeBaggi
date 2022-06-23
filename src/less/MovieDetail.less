@@ -47,7 +47,7 @@
         padding: 1rem;
 
         img {
-            max-width: 20rem !important;
+            max-width: 18rem !important;
         }
     }
 
@@ -70,6 +70,10 @@
         max-width: 40rem;
         font-size: 20px;
         font-family: @work;
+
+        @media (max-width: @tablet) {
+            font-size: 15px;
+        }
 
         .info__stars {
             display: flex;

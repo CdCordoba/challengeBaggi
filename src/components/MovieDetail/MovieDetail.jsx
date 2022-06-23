@@ -38,7 +38,7 @@ export default function MovieDetail() {
                         <MovieStars score={Math.ceil(movie?.vote_average / 2)} />
                     </div>
                     <p>Release date: {movie?.release_date}</p>
-                    <p>{movie?.overview}</p>
+                    <p className='info__overview'>{movie?.overview}</p>
                 </div>
             </div>
         </div>

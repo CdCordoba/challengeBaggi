@@ -40,7 +40,7 @@
     padding: 1rem;
   }
   .movieDetail img {
-    max-width: 20rem !important;
+    max-width: 18rem !important;
   }
 }
 .movieDetail img {
@@ -60,6 +60,11 @@
     margin: auto;
     margin-top: 2rem;
     padding-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .movieDetail .info {
+    font-size: 15px;
   }
 }
 .movieDetail .info .info__stars {
