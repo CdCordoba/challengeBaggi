@@ -45,7 +45,7 @@ const rootReducer = (state = initialState, action) => {
         notFound: newMovies.length ? false : true,
       };
     case GET_MOVIE_DETAIL:
-      let movieDetail = state.allMovies.results.find((e) => e.id == payload);
+      let movieDetail = state.movies.results.find((e) => e.id == payload);
       return {
         ...state,
         movieDetail,

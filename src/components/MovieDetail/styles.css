@@ -34,6 +34,15 @@
   background-color: wheat;
   box-shadow: 5px 5px 40px -2px black;
 }
+@media (max-width: 1200px) {
+  .movieDetail {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .movieDetail img {
+    max-width: 20rem !important;
+  }
+}
 .movieDetail img {
   width: 15rem;
   border-radius: 5px;
@@ -43,6 +52,15 @@
   max-width: 40rem;
   font-size: 20px;
   font-family: 'Work Sans', sans-serif;
+}
+@media (max-width: 1200px) {
+  .movieDetail .info {
+    border-top: 1px solid gray;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
 }
 .movieDetail .info .info__stars {
   display: flex;

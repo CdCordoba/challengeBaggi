@@ -35,7 +35,7 @@ export default function MovieCards() {
                 :
                 movies.results?.length ? movies.results?.map((movie) => {
                     return (
-                        <Link to={`/movie/${movie.id}`}>
+                        <Link to={`/movie/${movie.id}`} key={movie.id}>
                             <div key={movie.id} className='movies'>
                                 <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} />
                             </div>

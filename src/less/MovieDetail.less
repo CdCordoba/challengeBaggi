@@ -42,6 +42,15 @@
     background-color: wheat;
     box-shadow: @boxShadow;
 
+    @media (max-width: @desktop) {
+        flex-direction: column;
+        padding: 1rem;
+
+        img {
+            max-width: 20rem !important;
+        }
+    }
+
     img {
         width: 15rem;
         border-radius: 5px;
@@ -49,6 +58,15 @@
     }
 
     .info {
+        @media (max-width: @desktop) {
+            border-top: 1px solid gray;
+            max-width: 80%;
+            margin: auto;
+            margin-top: 2rem;
+            padding-top: 1rem;
+
+        }
+
         max-width: 40rem;
         font-size: 20px;
         font-family: @work;
